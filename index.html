@@ -60,7 +60,7 @@
 
           <a class="text-link" href="#work">
             LET'S WORK
-            <span>→</span>
+            <span class="icon-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4 12h16M14 6l6 6-6 6" /></svg></span>
           </a>
         </div>
 
@@ -96,7 +96,7 @@
         </div>
 
         <a class="scroll-link" href="#work">
-          <span>↓</span>
+          <span class="icon-arrow icon-arrow--down" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 4v16M6 14l6 6 6-6" /></svg></span>
           SCROLL
         </a>
 
@@ -111,7 +111,7 @@
       <div class="section-heading">
         <div class="section-heading__title">
           <i></i>
-          <span>SELECTED WORKS</span>
+          <span>RECENT WORK</span>
         </div>
 
         <div class="section-heading__line"></div>
@@ -123,118 +123,658 @@
 
 
       <article class="project">
-        <div class="project__number">01</div>
+        <h2 class="project__heading">
+          <button class="project__summary" type="button" id="project-voicli-trigger" aria-expanded="false" aria-controls="project-voicli-details">
+            <span class="project__number">01</span>
+            <span class="project__info">
+              <span class="project__title">VOICLI</span>
+              <span class="project__category">AI Meeting Translator</span>
+              <span class="project__stack">React / Front-End / UI / QA</span>
+            </span>
+            <span class="project__summary-about">
+              <span class="project__summary-about-label">About the Project</span>
+              <span>Voicli is a real-time AI translation platform for multilingual online meetings. It enables participants speaking different languages to communicate using live voice translation and translated subtitles directly in the browser.</span>
+            </span>
+            <span class="project__preview" aria-hidden="true">
+              <img src="assets/images/projects/voicli-translatio.png" alt="Voicli AI meeting translation interface">
+            </span>
+            <span class="project__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 19 19 5M8 5h11v11" /></svg></span>
+          </button>
+        </h2>
 
-        <div class="project__info">
-          <h2>ECCM</h2>
-          <strong>Corporate Website</strong>
-          <p>WordPress / Multilingual</p>
+        <div class="project__details" id="project-voicli-details" role="region" aria-labelledby="project-voicli-trigger" aria-hidden="true">
+          <div class="project__details-inner">
+            <div class="project__case project__case--split">
+
+              <div class="project__case-content">
+                <section class="project__block">
+                  <h3>My Role</h3>
+                  <ul class="project__list">
+                    <li>Front-End Developer</li>
+                    <li>UI Designer</li>
+                    <li>QA</li>
+                  </ul>
+                </section>
+
+                <section class="project__block">
+                  <h3>Project Context</h3>
+                  <p>The product was built from the ground up by a two-person development team. I was responsible for the front-end and worked directly with the back-end developer.</p>
+                </section>
+
+                <section class="project__block project__block--wide">
+                  <h3>My Contribution</h3>
+                  <p>Built and developed the product interface from scratch, covering UI design and front-end implementation as well as a significant part of product logic and end-to-end testing.</p>
+                </section>
+
+                <section class="project__block project__block--wide">
+                  <h3>Focus Areas</h3>
+                  <ul class="project__focus-list">
+                    <li>UI design</li>
+                    <li>Front-end development</li>
+                    <li>Product logic and user flows</li>
+                    <li>Responsive interfaces</li>
+                    <li>Meeting and pre-join flows</li>
+                    <li>Contacts and user management</li>
+                    <li>Onboarding</li>
+                    <li>Multilingual interface</li>
+                    <li>20 locales</li>
+                    <li>RTL support</li>
+                    <li>Functional testing</li>
+                    <li>UI testing</li>
+                    <li>Edge-case testing</li>
+                    <li>SEO and localized content</li>
+                  </ul>
+                </section>
+
+                <section class="project__block project__block--wide">
+                  <h3>Stack</h3>
+                  <ul class="project__stack-list">
+                    <li>React</li>
+                    <li>Front-End</li>
+                    <li>UI</li>
+                    <li>QA</li>
+                    <li>i18n</li>
+                  </ul>
+                </section>
+              </div>
+
+              <div class="project__gallery" aria-label="Voicli project screenshots">
+                <img src="assets/images/projects/portfolio-screenshots/recent-work/voicli/voicli-01.webp" alt="Voicli project screenshot 1" loading="lazy">
+                <img src="assets/images/projects/portfolio-screenshots/recent-work/voicli/voicli-02.webp" alt="Voicli project screenshot 2" loading="lazy">
+                <img src="assets/images/projects/portfolio-screenshots/recent-work/voicli/voicli-03.webp" alt="Voicli project screenshot 3" loading="lazy">
+              </div>
+
+              <div class="project__live-row">
+                <a class="project__live" href="https://voicli.com/" target="_blank" rel="noopener noreferrer">View Live <span class="icon-arrow icon-arrow--external" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 19 19 5M8 5h11v11" /></svg></span></a>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div class="project__preview project__preview--eccm">
-          <span>ECCM</span>
-          <strong>Shaping Standards,<br>Building Confidence</strong>
-        </div>
-
-        <a class="project__arrow" href="#" aria-label="View ECCM project">
-          ↗
-        </a>
       </article>
 
 
       <article class="project">
-        <div class="project__number">02</div>
+        <h2 class="project__heading">
+          <button class="project__summary" type="button" id="project-pas-fou-trigger" aria-expanded="false" aria-controls="project-pas-fou-details">
+            <span class="project__number">02</span>
+            <span class="project__info">
+              <span class="project__title">PAS FOU</span>
+              <span class="project__category">Carbon Footprint Platform</span>
+              <span class="project__stack">Project Management / Product Logic / QA</span>
+            </span>
+            <span class="project__summary-about">
+              <span class="project__summary-about-label">About the Project</span>
+              <span>Pas Fou is a carbon footprint platform built around a dynamic questionnaire that adapts to each user and supports individual and household scenarios.</span>
+            </span>
+            <span class="project__preview" aria-hidden="true">
+              <img src="assets/images/projects/pasfou.png" alt="Pas Fou carbon footprint platform">
+            </span>
+            <span class="project__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 19 19 5M8 5h11v11" /></svg></span>
+          </button>
+        </h2>
 
-        <div class="project__info">
-          <h2>GREENVERIFY</h2>
-          <strong>B2B Platform</strong>
-          <p>WordPress / Multilingual / Custom Theme</p>
+        <div class="project__details" id="project-pas-fou-details" role="region" aria-labelledby="project-pas-fou-trigger" aria-hidden="true">
+          <div class="project__details-inner">
+            <div class="project__case project__case--pas-fou">
+              <div class="project__case-lead">
+                <figure class="project__featured-shot">
+                  <img src="assets/images/projects/portfolio-screenshots/recent-work/pas-fou/pas-fou-01.webp" alt="Pas Fou project screenshot 1" loading="lazy">
+                </figure>
+                <section class="project__block">
+                  <h3>About the Project</h3>
+                  <p>Pas Fou is a carbon footprint assessment platform that helps users calculate and understand their environmental impact and identify actions they can take to reduce their emissions.</p>
+                  <p>The core of the product is a complex dynamic questionnaire covering different areas of everyday life.</p>
+                  <p>Unlike a traditional linear survey, the questionnaire adapts its structure to each user. Answers can dynamically create individual entities — such as vehicles or household members — which then become part of subsequent question flows.</p>
+                  <p>Questions can be repeated, adapted or conditionally displayed for each specific entity.</p>
+                  <p>Users can calculate not only their own footprint but also work with household members and provide answers on their behalf.</p>
+                  <p>After completing the assessment, users can choose actions they are willing to take to reduce their emissions and track the resulting reduction impact.</p>
+                </section>
+              </div>
+
+              <div class="project__case-content">
+                <section class="project__block">
+                  <h3>My Role</h3>
+                  <ul class="project__list">
+                    <li>Project Management</li>
+                    <li>Product Logic</li>
+                    <li>QA</li>
+                  </ul>
+                </section>
+
+                <section class="project__block project__block--wide">
+                  <h3>My Contribution</h3>
+                  <p>Worked on product logic, requirements, development coordination and testing of a complex questionnaire-driven system.</p>
+                  <p>A key part of the product was the dynamic entity logic.</p>
+                  <p><strong>Example:</strong> A user can specify that they own three vehicles. The system creates three separate vehicle entities. The user can name each vehicle. Later questions related to vehicles are generated and answered separately for each specific vehicle.</p>
+                  <p>The same principle applies to household members and other dependent scenarios.</p>
+                </section>
+
+                <section class="project__block project__block--wide">
+                  <h3>Focus Areas</h3>
+                  <ul class="project__focus-list">
+                    <li>Product logic and requirements</li>
+                    <li>Complex questionnaire architecture</li>
+                    <li>Conditional and dependent question flows</li>
+                    <li>Multiple question types</li>
+                    <li>Text answers</li>
+                    <li>Numeric answers</li>
+                    <li>Dynamic user-created entities</li>
+                    <li>Entity-specific answers</li>
+                    <li>Household member scenarios</li>
+                    <li>Functional testing</li>
+                    <li>UI testing</li>
+                    <li>Edge-case testing</li>
+                    <li>Bug reporting and verification</li>
+                    <li>Development coordination</li>
+                    <li>Carbon footprint calculation flows</li>
+                    <li>Reduction actions and recommendations</li>
+                  </ul>
+                </section>
+
+                <section class="project__block">
+                  <h3>Stack</h3>
+                  <ul class="project__list">
+                    <li>Project Management</li>
+                    <li>Product Logic</li>
+                    <li>QA</li>
+                  </ul>
+                </section>
+
+                <section class="project__block project__block--wide project__logic">
+                  <h3>Dynamic Question Logic</h3>
+                  <ol class="project__flow">
+                    <li>Answer</li>
+                    <li>Create entities</li>
+                    <li>Name entities</li>
+                    <li>Generate dependent questions</li>
+                    <li>Store entity-specific answers</li>
+                  </ol>
+                </section>
+              </div>
+
+              <div class="project__gallery" aria-label="Pas Fou project screenshots">
+                <img src="assets/images/projects/portfolio-screenshots/recent-work/pas-fou/pas-fou-02.webp" alt="Pas Fou project screenshot 2" loading="lazy">
+                <img src="assets/images/projects/portfolio-screenshots/recent-work/pas-fou/pas-fou-03.webp" alt="Pas Fou project screenshot 3" loading="lazy">
+                <img src="assets/images/projects/portfolio-screenshots/recent-work/pas-fou/pas-fou-04.webp" alt="Pas Fou project screenshot 4" loading="lazy">
+                <img src="assets/images/projects/portfolio-screenshots/recent-work/pas-fou/pas-fou-06.webp" alt="Pas Fou project screenshot 6" loading="lazy">
+                <img src="assets/images/projects/portfolio-screenshots/recent-work/pas-fou/pas-fou-05.webp" alt="Pas Fou project screenshot 5" loading="lazy">
+                <img src="assets/images/projects/portfolio-screenshots/recent-work/pas-fou/pas-fou-07.webp" alt="Pas Fou project screenshot 7" loading="lazy">
+              </div>
+
+              <div class="project__live-row">
+                <a class="project__live" href="https://pasfou.app/" target="_blank" rel="noopener noreferrer">View Live <span class="icon-arrow icon-arrow--external" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 19 19 5M8 5h11v11" /></svg></span></a>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div class="project__preview project__preview--green">
-          <span>GreenVerify</span>
-          <strong>
-            Green Verification<br>
-            made simple
-          </strong>
-        </div>
-
-        <a class="project__arrow" href="#" aria-label="View GreenVerify project">
-          ↗
-        </a>
       </article>
 
 
       <article class="project">
-        <div class="project__number">03</div>
+        <h2 class="project__heading">
+          <button class="project__summary" type="button" id="project-greenverify-trigger" aria-expanded="false" aria-controls="project-greenverify-details">
+            <span class="project__number">03</span>
+            <span class="project__info">
+              <span class="project__title">GREENVERIFY</span>
+              <span class="project__category">Environmental B2B Website</span>
+              <span class="project__stack">WordPress / UI / Multilingual</span>
+            </span>
+            <span class="project__summary-about">
+              <span class="project__summary-about-label">About the Project</span>
+              <span>GreenVerify is a B2B website for a Polish company providing verification and consulting services in GHG emissions, EU ETS, CBAM and ESG.</span>
+            </span>
+            <span class="project__preview" aria-hidden="true">
+              <img src="assets/images/projects/GREENVERIFY.png" alt="GreenVerify environmental website">
+            </span>
+            <span class="project__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 19 19 5M8 5h11v11" /></svg></span>
+          </button>
+        </h2>
 
-        <div class="project__info">
-          <h2>ENGLISH<br>IN CEBU</h2>
-          <strong>Education Website</strong>
-          <p>
-            Custom Theme / CPT / Taxonomies /<br>
-            Custom Fields / Advanced Filtering
-          </p>
+        <div class="project__details" id="project-greenverify-details" role="region" aria-labelledby="project-greenverify-trigger" aria-hidden="true">
+          <div class="project__details-inner">
+            <div class="project__case project__case--split">
+
+              <div class="project__case-content">
+                <section class="project__block">
+                  <h3>My Role</h3>
+                  <ul class="project__list">
+                    <li>Web Designer</li>
+                    <li>WordPress Developer</li>
+                  </ul>
+                </section>
+
+                <section class="project__block project__block--wide">
+                  <h3>My Contribution</h3>
+                  <p>Created the website from the ground up with very limited initial input from the client.</p>
+                  <p>Developed the visual direction, page structure and UI, and implemented the complete multilingual WordPress website.</p>
+                </section>
+
+                <section class="project__block">
+                  <h3>Focus Areas</h3>
+                  <ul class="project__focus-list project__focus-list--single">
+                    <li>Web design</li>
+                    <li>Page structure</li>
+                    <li>UI</li>
+                    <li>WordPress development</li>
+                    <li>Responsive development</li>
+                    <li>Multilingual website</li>
+                    <li>Content structure</li>
+                  </ul>
+                </section>
+
+                <section class="project__block">
+                  <h3>Stack</h3>
+                  <ul class="project__list">
+                    <li>WordPress</li>
+                    <li>UI</li>
+                    <li>Responsive Development</li>
+                    <li>Multilingual</li>
+                  </ul>
+                </section>
+              </div>
+
+              <div class="project__gallery" aria-label="GreenVerify project screenshots">
+                <img src="assets/images/projects/portfolio-screenshots/recent-work/greenverify/greenverify-03.webp" alt="GreenVerify project screenshot 3" loading="lazy">
+                <img src="assets/images/projects/portfolio-screenshots/recent-work/greenverify/greenverify-02.webp" alt="GreenVerify project screenshot 2" loading="lazy">
+                <img src="assets/images/projects/portfolio-screenshots/recent-work/greenverify/greenverify-01.webp" alt="GreenVerify project screenshot 1" loading="lazy">
+              </div>
+
+              <div class="project__live-row">
+                <a class="project__live" href="https://www.greenverify.pl/" target="_blank" rel="noopener noreferrer">View Live <span class="icon-arrow icon-arrow--external" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 19 19 5M8 5h11v11" /></svg></span></a>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div class="project__preview project__preview--cebu">
-          <span>ENGLISH IN CEBU</span>
-          <strong>
-            English<br>
-            in Cebu
-          </strong>
-        </div>
-
-        <a class="project__arrow" href="#" aria-label="View English in Cebu project">
-          ↗
-        </a>
       </article>
 
 
       <article class="project">
-        <div class="project__number">04</div>
+        <h2 class="project__heading">
+          <button class="project__summary" type="button" id="project-yourlifexpert-trigger" aria-expanded="false" aria-controls="project-yourlifexpert-details">
+            <span class="project__number">04</span>
+            <span class="project__info">
+              <span class="project__title">YOURLIF<wbr>EXPERT</span>
+              <span class="project__category">E-commerce &amp; Wellness Platform</span>
+              <span class="project__stack">WooCommerce / WordPress / UI</span>
+            </span>
+            <span class="project__summary-about">
+              <span class="project__summary-about-label">About the Project</span>
+              <span>YourLifeExpert is an established wellness e-commerce platform combining an online store, educational content and a personalized user experience.</span>
+            </span>
+            <span class="project__preview" aria-hidden="true">
+              <img src="assets/images/projects/yourlifexpert.png" alt="YourLifeExpert wellness e-commerce website">
+            </span>
+            <span class="project__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 19 19 5M8 5h11v11" /></svg></span>
+          </button>
+        </h2>
 
-        <div class="project__info">
-          <h2>VOICLI</h2>
-          <strong>AI Meeting Translator</strong>
-          <p>Front-End / React / UI</p>
+        <div class="project__details" id="project-yourlifexpert-details" role="region" aria-labelledby="project-yourlifexpert-trigger" aria-hidden="true">
+          <div class="project__details-inner">
+            <div class="project__case project__case--split">
+
+              <div class="project__case-content">
+                <section class="project__block">
+                  <h3>My Role</h3>
+                  <ul class="project__list">
+                    <li>WordPress / WooCommerce Development</li>
+                    <li>UI</li>
+                  </ul>
+                </section>
+
+                <section class="project__block">
+                  <h3>Project Context</h3>
+                  <p>This was an existing WordPress/WooCommerce project rather than a website built from scratch.</p>
+                </section>
+
+                <section class="project__block project__block--wide">
+                  <h3>My Contribution</h3>
+                  <p>Worked within the existing website and improved key parts of the product.</p>
+                  <p>Redesigned and rebuilt a number of main pages. Improved and developed the online store. Implemented and configured a registration questionnaire used to collect additional user information during the onboarding process.</p>
+                </section>
+
+                <section class="project__block">
+                  <h3>Focus Areas</h3>
+                  <ul class="project__focus-list project__focus-list--single">
+                    <li>Redesign of key pages</li>
+                    <li>WordPress development</li>
+                    <li>WooCommerce</li>
+                    <li>Online store improvements</li>
+                    <li>UI improvements</li>
+                    <li>Registration questionnaire</li>
+                    <li>User onboarding flow</li>
+                    <li>Existing project maintenance and development</li>
+                  </ul>
+                </section>
+
+                <section class="project__block">
+                  <h3>Stack</h3>
+                  <ul class="project__list">
+                    <li>WordPress</li>
+                    <li>WooCommerce</li>
+                    <li>UI</li>
+                  </ul>
+                </section>
+              </div>
+
+              <div class="project__gallery" aria-label="YourLifeExpert project screenshots">
+                <img src="assets/images/projects/portfolio-screenshots/recent-work/yourlifexpert/yourlifexpert-01.webp" alt="YourLifeExpert project screenshot 1" loading="lazy">
+                <img src="assets/images/projects/portfolio-screenshots/recent-work/yourlifexpert/yourlifexpert-03.webp" alt="YourLifeExpert project screenshot 3" loading="lazy">
+                <img src="assets/images/projects/portfolio-screenshots/recent-work/yourlifexpert/yourlifexpert-02.webp" alt="YourLifeExpert project screenshot 2" loading="lazy">
+              </div>
+
+              <div class="project__live-row">
+                <a class="project__live" href="https://yourlifexpert.com/" target="_blank" rel="noopener noreferrer">View Live <span class="icon-arrow icon-arrow--external" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 19 19 5M8 5h11v11" /></svg></span></a>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div class="project__preview project__preview--voicli">
-          <span>Voicli</span>
-          <strong>
-            Real-time translation<br>
-            for any conversation
-          </strong>
-        </div>
-
-        <a class="project__arrow" href="#" aria-label="View Voicli project">
-          ↗
-        </a>
       </article>
 
 
       <article class="project">
-        <div class="project__number">05</div>
+        <h2 class="project__heading">
+          <button class="project__summary" type="button" id="project-eccm-trigger" aria-expanded="false" aria-controls="project-eccm-details">
+            <span class="project__number">05</span>
+            <span class="project__info">
+              <span class="project__title">ECCM</span>
+              <span class="project__category">Investment Management Website</span>
+              <span class="project__stack">WordPress / Front-End / UI / HubSpot</span>
+            </span>
+            <span class="project__summary-about">
+              <span class="project__summary-about-label">About the Project</span>
+              <span>ECCM is a corporate website for an Australian quantitative investment management company.</span>
+            </span>
+            <span class="project__preview" aria-hidden="true">
+              <img src="assets/images/projects/eccm.png" alt="ECCM investment management website">
+            </span>
+            <span class="project__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 19 19 5M8 5h11v11" /></svg></span>
+          </button>
+        </h2>
 
-        <div class="project__info">
-          <h2>QP</h2>
-          <strong>Product Development</strong>
-          <p>React / TypeScript / Product UI</p>
+        <div class="project__details" id="project-eccm-details" role="region" aria-labelledby="project-eccm-trigger" aria-hidden="true">
+          <div class="project__details-inner">
+            <div class="project__case project__case--split">
+
+              <div class="project__case-content">
+                <section class="project__block">
+                  <h3>My Role</h3>
+                  <ul class="project__list">
+                    <li>Web Designer</li>
+                    <li>WordPress Developer</li>
+                  </ul>
+                </section>
+
+                <section class="project__block project__block--wide">
+                  <h3>My Contribution</h3>
+                  <p>Designed and developed the website from the ground up based on the client's requirements.</p>
+                  <p>Created the page structure and visual interface, implemented the responsive WordPress website and integrated HubSpot for lead/contact management.</p>
+                </section>
+
+                <section class="project__block">
+                  <h3>Focus Areas</h3>
+                  <ul class="project__focus-list project__focus-list--single">
+                    <li>Web design</li>
+                    <li>Page structure</li>
+                    <li>WordPress development</li>
+                    <li>Responsive development</li>
+                    <li>UI implementation</li>
+                    <li>HubSpot integration</li>
+                  </ul>
+                </section>
+
+                <section class="project__block">
+                  <h3>Stack</h3>
+                  <ul class="project__list">
+                    <li>WordPress</li>
+                    <li>Front-End</li>
+                    <li>UI</li>
+                    <li>HubSpot</li>
+                  </ul>
+                </section>
+              </div>
+
+              <div class="project__gallery" aria-label="ECCM project screenshots">
+                <img src="assets/images/projects/portfolio-screenshots/recent-work/eccm/eccm-01.webp" alt="ECCM project screenshot 1" loading="lazy">
+                <img src="assets/images/projects/portfolio-screenshots/recent-work/eccm/eccm-02.webp" alt="ECCM project screenshot 2" loading="lazy">
+                <img src="assets/images/projects/portfolio-screenshots/recent-work/eccm/eccm-03.webp" alt="ECCM project screenshot 3" loading="lazy">
+              </div>
+
+              <div class="project__live-row">
+                <a class="project__live" href="https://www.eccm.com.au/" target="_blank" rel="noopener noreferrer">View Live <span class="icon-arrow icon-arrow--external" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 19 19 5M8 5h11v11" /></svg></span></a>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div class="project__preview project__preview--qp">
-          <span>QP</span>
-          <strong>
-            Product interfaces<br>
-            and web application
-          </strong>
-        </div>
-
-        <a class="project__arrow" href="#" aria-label="View QP project">
-          ↗
-        </a>
       </article>
+
+
+      <section class="archive" aria-labelledby="archive-title">
+        <div class="section-heading">
+          <div class="section-heading__title">
+            <i></i>
+            <span>PROJECT ARCHIVE</span>
+          </div>
+
+          <div class="section-heading__line"></div>
+
+          <span class="section-heading__small">
+            MORE PROJECTS
+          </span>
+        </div>
+
+        <div class="archive__intro-grid">
+          <h2 class="archive__title" id="archive-title">
+            PROJECT<br>
+            <span>ARCHIVE.</span>
+          </h2>
+
+          <div class="archive__intro">
+            <p>
+              Every website has its own life — and it isn't always a long one.
+            </p>
+            <p>
+              Over the years, some projects have evolved, been redesigned or moved
+              to new platforms. Others disappeared together with the businesses they
+              were created for, while some survived only in original design files
+              and archives.
+            </p>
+            <p>
+              Some of my earliest work belongs to a very different era of the web.
+              What felt modern and well-designed at the time may look very different
+              by today's standards. Those projects reflect both how the industry has
+              changed and how my own approach, skills and understanding of digital
+              products have evolved along with it.
+            </p>
+            <p>
+              Not every project needs to remain in a portfolio forever. This archive
+              is therefore not a complete history, but a selection of websites and
+              digital products that reflects the variety of projects, technologies
+              and challenges I've worked with over the years.
+            </p>
+          </div>
+        </div>
+
+        <div class="archive__content">
+          <div class="archive__table">
+            <div class="archive__columns" aria-hidden="true">
+              <span>Project Name</span><span>Category</span><span>Technology</span><span>Status</span><span></span>
+            </div>
+
+            <ul class="archive__list">
+              <li>
+                <button class="archive__row" type="button" aria-expanded="false" aria-controls="archive-details-01" data-name="AIGNER Munich" data-category="E-commerce">
+                  <span class="archive__name">AIGNER Munich</span>
+                  <span class="archive__category">E-commerce</span>
+                  <span class="archive__technology">Shopify</span>
+                  <span class="archive__status archive__status--live">Live</span>
+                  <span class="archive__arrow" aria-hidden="true">→</span>
+                </button>
+                <div class="archive__details" id="archive-details-01" role="region"><div class="archive__details-inner"><h3>About the Project</h3><p>E-commerce work for an international luxury fashion brand.</p><h3>My Work</h3><p>Details will be added</p><h3>Screenshots</h3><div class="archive__gallery"><div>Screenshot 01</div><div>Screenshot 02</div></div><a class="archive__visit" href="https://www.aignermunich.com/" target="_blank" rel="noopener noreferrer">Visit Website ↗</a></div></div>
+              </li>
+              <li>
+                <button class="archive__row" type="button" aria-expanded="false" aria-controls="archive-details-02" data-name="Beam Bold" data-category="E-commerce">
+                  <span class="archive__name">Beam Bold</span>
+                  <span class="archive__category">E-commerce</span>
+                  <span class="archive__technology">Shopify</span>
+                  <span class="archive__status archive__status--live">Live</span>
+                  <span class="archive__arrow" aria-hidden="true">→</span>
+                </button>
+                <div class="archive__details" id="archive-details-02" role="region"><div class="archive__details-inner"><h3>About the Project</h3><p>Fashion e-commerce project built on Shopify.</p><h3>My Work</h3><p>Details will be added</p><h3>Screenshots</h3><div class="archive__gallery"><div>Screenshot 01</div><div>Screenshot 02</div></div><a class="archive__visit" href="https://beambold.com/" target="_blank" rel="noopener noreferrer">Visit Website ↗</a></div></div>
+              </li>
+              <li>
+                <button class="archive__row" type="button" aria-expanded="false" aria-controls="archive-details-03" data-name="Alliance Group" data-category="Corporate">
+                  <span class="archive__name">Alliance Group</span>
+                  <span class="archive__category">Corporate</span>
+                  <span class="archive__technology">WordPress</span>
+                  <span class="archive__status archive__status--live">Live</span>
+                  <span class="archive__arrow" aria-hidden="true">→</span>
+                </button>
+                <div class="archive__details" id="archive-details-03" role="region"><div class="archive__details-inner"><h3>About the Project</h3><p>Corporate B2B website presenting company services and expertise.</p><h3>My Work</h3><p>Details will be added</p><h3>Screenshots</h3><div class="archive__gallery"><div>Screenshot 01</div><div>Screenshot 02</div></div><a class="archive__visit" href="https://www.alliance-group.com.ua/" target="_blank" rel="noopener noreferrer">Visit Website ↗</a></div></div>
+              </li>
+              <li>
+                <button class="archive__row" type="button" aria-expanded="false" aria-controls="archive-details-04" data-name="Vergleiche.ch" data-category="Comparison Platform">
+                  <span class="archive__name">Vergleiche.ch</span>
+                  <span class="archive__category">Comparison Platform</span>
+                  <span class="archive__technology">WordPress</span>
+                  <span class="archive__status archive__status--live">Live</span>
+                  <span class="archive__arrow" aria-hidden="true">→</span>
+                </button>
+                <div class="archive__details" id="archive-details-04" role="region"><div class="archive__details-inner"><h3>About the Project</h3><p>Swiss product and price comparison platform connecting a large catalogue with multiple online stores.</p><h3>My Work</h3><p>Details will be added</p><h3>Screenshots</h3><div class="archive__gallery"><div>Screenshot 01</div><div>Screenshot 02</div></div><a class="archive__visit" href="https://www.vergleiche.ch/" target="_blank" rel="noopener noreferrer">Visit Website ↗</a></div></div>
+              </li>
+              <li>
+                <button class="archive__row" type="button" aria-expanded="false" aria-controls="archive-details-05" data-name="SalonBeauty" data-category="Education">
+                  <span class="archive__name">SalonBeauty</span>
+                  <span class="archive__category">Education</span>
+                  <span class="archive__technology">WordPress</span>
+                  <span class="archive__status archive__status--live">Live</span>
+                  <span class="archive__arrow" aria-hidden="true">→</span>
+                </button>
+                <div class="archive__details" id="archive-details-05" role="region"><div class="archive__details-inner"><h3>About the Project</h3><p>Beauty education platform with courses, services and extensive content.</p><h3>My Work</h3><p>Details will be added</p><h3>Screenshots</h3><div class="archive__gallery"><div>Screenshot 01</div><div>Screenshot 02</div></div><a class="archive__visit" href="https://www.salonbeauty.com.ua/" target="_blank" rel="noopener noreferrer">Visit Website ↗</a></div></div>
+              </li>
+              <li>
+                <button class="archive__row" type="button" data-name="YourLifeExpert" data-category="E-commerce">
+                  <span class="archive__name">YourLifeExpert</span>
+                  <span class="archive__category">E-commerce</span>
+                  <span class="archive__technology">WooCommerce</span>
+                  <span class="archive__status archive__status--live">Live</span>
+                  <span class="archive__arrow" aria-hidden="true">→</span>
+                </button>
+              </li>
+              <li>
+                <button class="archive__row" type="button" data-name="Metodo Punzo" data-category="Healthcare">
+                  <span class="archive__name">Metodo Punzo</span>
+                  <span class="archive__category">Healthcare</span>
+                  <span class="archive__technology">WordPress</span>
+                  <span class="archive__status archive__status--live">Live</span>
+                  <span class="archive__arrow" aria-hidden="true">→</span>
+                </button>
+              </li>
+              <li>
+                <button class="archive__row" type="button" data-name="ECCM" data-category="Finance" data-preview="assets/images/projects/eccm-home.svg">
+                  <span class="archive__name">ECCM</span>
+                  <span class="archive__category">Finance</span>
+                  <span class="archive__technology">WordPress</span>
+                  <span class="archive__status archive__status--live">Live</span>
+                  <span class="archive__arrow" aria-hidden="true">→</span>
+                </button>
+              </li>
+              <li>
+                <button class="archive__row" type="button" data-name="Vikont" data-category="Commercial">
+                  <span class="archive__name">Vikont</span>
+                  <span class="archive__category">Commercial</span>
+                  <span class="archive__technology">WordPress</span>
+                  <span class="archive__status archive__status--live">Live</span>
+                  <span class="archive__arrow" aria-hidden="true">→</span>
+                </button>
+              </li>
+              <li>
+                <button class="archive__row" type="button" data-name="Top20Banks" data-category="Fintech / Comparison">
+                  <span class="archive__name">Top20Banks</span>
+                  <span class="archive__category">Fintech / Comparison</span>
+                  <span class="archive__technology">Web / UI</span>
+                  <span class="archive__status">Archive</span>
+                  <span class="archive__arrow" aria-hidden="true">→</span>
+                </button>
+              </li>
+              <li>
+                <button class="archive__row" type="button" data-name="Mobiblade China" data-category="Marketing">
+                  <span class="archive__name">Mobiblade China</span>
+                  <span class="archive__category">Marketing</span>
+                  <span class="archive__technology">Web / UI</span>
+                  <span class="archive__status">Archive</span>
+                  <span class="archive__arrow" aria-hidden="true">→</span>
+                </button>
+              </li>
+              <li>
+                <button class="archive__row" type="button" data-name="Loft Dance" data-category="Education">
+                  <span class="archive__name">Loft Dance</span>
+                  <span class="archive__category">Education</span>
+                  <span class="archive__technology">WordPress</span>
+                  <span class="archive__status">Archive</span>
+                  <span class="archive__arrow" aria-hidden="true">→</span>
+                </button>
+              </li>
+              <li>
+                <button class="archive__row" type="button" data-name="ForexListing" data-category="Finance">
+                  <span class="archive__name">ForexListing</span>
+                  <span class="archive__category">Finance</span>
+                  <span class="archive__technology">Web / UI</span>
+                  <span class="archive__status">Archive</span>
+                  <span class="archive__arrow" aria-hidden="true">→</span>
+                </button>
+              </li>
+              <li>
+                <button class="archive__row" type="button" data-name="English in Cebu" data-category="Education Platform" data-preview="assets/images/projects/cebu-home.svg">
+                  <span class="archive__name">English in Cebu</span>
+                  <span class="archive__category">Education Platform</span>
+                  <span class="archive__technology">Custom WordPress</span>
+                  <span class="archive__status">Archive</span>
+                  <span class="archive__arrow" aria-hidden="true">→</span>
+                </button>
+              </li>
+              <li>
+                <button class="archive__row" type="button" data-name="Enercom" data-category="Energy">
+                  <span class="archive__name">Enercom</span>
+                  <span class="archive__category">Energy</span>
+                  <span class="archive__technology">WordPress</span>
+                  <span class="archive__status">Archive</span>
+                  <span class="archive__arrow" aria-hidden="true">→</span>
+                </button>
+              </li>
+              <li>
+                <button class="archive__row" type="button" data-name="Belimo" data-category="Engineering">
+                  <span class="archive__name">Belimo</span>
+                  <span class="archive__category">Engineering</span>
+                  <span class="archive__technology">WordPress</span>
+                  <span class="archive__status">Archive</span>
+                  <span class="archive__arrow" aria-hidden="true">→</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
 
     </section>
 
@@ -323,27 +863,27 @@
           useful and beautiful.
         </p>
 
-        <a href="mailto:your@email.com" class="circle-link">
-          →
-        </a>
+        <span class="circle-link icon-arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false"><path d="M4 12h16M14 6l6 6-6 6" /></svg>
+        </span>
       </div>
 
       <div class="footer__contacts">
 
-        <a href="mailto:your@email.com">
+        <div class="footer__contact">
           <span>EMAIL</span>
           your@email.com
-        </a>
+        </div>
 
-        <a href="#">
+        <div class="footer__contact">
           <span>LINKEDIN</span>
           linkedin.com/in/your-profile
-        </a>
+        </div>
 
-        <a href="#">
+        <div class="footer__contact">
           <span>TELEGRAM</span>
           @your_username
-        </a>
+        </div>
 
       </div>
 

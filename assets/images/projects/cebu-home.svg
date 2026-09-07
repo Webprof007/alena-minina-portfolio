@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750">
+  <defs><linearGradient id="sea" x2="1" y2="1"><stop stop-color="#79bee9"/><stop offset=".58" stop-color="#207d9d"/><stop offset="1" stop-color="#173f46"/></linearGradient></defs>
+  <rect width="1200" height="750" fill="url(#sea)"/>
+  <path d="M0 545c190-90 363-82 520 24 174 118 390 110 680-47v228H0z" fill="#d9c691" opacity=".85"/>
+  <rect x="40" y="30" width="1120" height="70" rx="8" fill="#fff" opacity=".96"/>
+  <text x="70" y="73" fill="#14587a" font-family="Arial" font-size="21" font-weight="700">ENGLISH IN CEBU</text>
+  <text x="720" y="72" fill="#173f55" font-family="Arial" font-size="13">SCHOOLS  COURSES  GUIDE  CONTACT</text>
+  <text x="60" y="210" fill="#fff" font-family="Arial" font-size="15" font-weight="700">FIND YOUR SCHOOL IN THE PHILIPPINES</text>
+  <text x="58" y="330" fill="#fff" font-family="Arial" font-size="83" font-weight="700">Learn English.</text>
+  <text x="58" y="420" fill="#fff" font-family="Arial" font-size="83" font-weight="700">Live Cebu.</text>
+  <rect x="60" y="484" width="670" height="76" rx="12" fill="#fff"/>
+  <text x="88" y="514" fill="#527080" font-family="Arial" font-size="12">WHAT ARE YOU LOOKING FOR?</text>
+  <text x="88" y="544" fill="#173f55" font-family="Arial" font-size="17">Choose a course or school</text>
+  <rect x="580" y="495" width="132" height="54" rx="9" fill="#f1ef00"/>
+  <text x="620" y="528" fill="#16394b" font-family="Arial" font-size="14" font-weight="700">SEARCH</text>
+</svg>

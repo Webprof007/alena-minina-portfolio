@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750">
+  <rect width="1200" height="750" fill="#171918"/>
+  <line x1="0" y1="0" x2="1200" y2="750" stroke="#343735" stroke-width="2"/>
+  <line x1="1200" y1="0" x2="0" y2="750" stroke="#343735" stroke-width="2"/>
+  <rect x="52" y="52" width="1096" height="646" fill="none" stroke="#5a5d5a"/>
+  <circle cx="82" cy="82" r="8" fill="#f1ef00"/>
+  <text x="600" y="367" fill="#f2f1eb" font-family="Arial, Helvetica, sans-serif" font-size="26" text-anchor="middle">PROJECT PREVIEW</text>
+  <text x="600" y="405" fill="#898c89" font-family="Arial, Helvetica, sans-serif" font-size="13" text-anchor="middle">IMAGE TO BE ADDED</text>
+</svg>

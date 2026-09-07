@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750">
+  <rect width="1200" height="750" fill="#d8d8d2"/>
+  <rect width="1200" height="72" fill="#f3f2ed"/>
+  <text x="54" y="47" fill="#151615" font-family="Arial" font-size="22" font-weight="700">ECCM</text>
+  <text x="850" y="45" fill="#151615" font-family="Arial" font-size="13">ABOUT  EXPERTISE  CONTACT</text>
+  <rect y="72" width="1200" height="678" fill="#646b6e"/>
+  <path d="M690 72h510v678H485z" fill="#aeb2b0"/>
+  <path d="M950 72h250v678H765z" fill="#d7d7d0" opacity=".72"/>
+  <text x="54" y="175" fill="#f5f4ee" font-family="Arial" font-size="16">EUROPEAN CONSTRUCTION CONSULTANCY</text>
+  <text x="54" y="410" fill="#fff" font-family="Arial" font-size="72" font-weight="700">Shaping Standards,</text>
+  <text x="54" y="488" fill="#fff" font-family="Arial" font-size="72" font-weight="700">Building Confidence</text>
+  <rect x="54" y="558" width="170" height="48" rx="24" fill="#f1ef00"/>
+  <text x="82" y="589" fill="#101110" font-family="Arial" font-size="14" font-weight="700">OUR EXPERTISE  →</text>
+</svg>
