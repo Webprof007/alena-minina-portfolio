@@ -41,7 +41,7 @@ projectButtons.forEach((button, index) => {
 const archiveList = document.querySelector(".archive__list");
 const archiveProjects = [
   ["SalonBeauty", "Beauty / Education", "WordPress", "Live", "Beauty education platform with courses, services and extensive content.", "https://www.salonbeauty.com.ua/"],
-  ["QP", "SaaS / Product", "React / TypeScript / UI", "Unreleased", "Product workspace redesigned as a modern web application with a new UI system and improved user flows."],
+  ["QP", "SaaS / Product", "React / TypeScript / UI", "Internal Use", "Product workspace redesigned as a modern web application with a new UI system and improved user flows."],
   ["Vikont", "Commercial", "WordPress", "Live", "Commercial website for a Ukrainian windows and doors company.", "https://vikontkyiv.com.ua/"],
   ["KTF", "Energy / Research", "WordPress", "Live", "Website for a Ukrainian research center working with energy efficiency, emissions verification, ISO and environmental services.", "https://www.ktf-src.com/"],
   ["Metodo Punzo", "Healthcare", "WordPress", "Live", "Website for an Italian physiotherapy and specialist medicine center with services, specialists and educational content.", "https://metodopunzo.it/"],
