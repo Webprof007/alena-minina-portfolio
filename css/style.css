@@ -1482,6 +1482,21 @@ img {
   .skills__ticker {
     justify-content: flex-start;
     overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--yellow) transparent;
+    scroll-behavior: smooth;
+  }
+
+  .skills__ticker::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .skills__ticker::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .skills__ticker::-webkit-scrollbar-thumb {
+    background: var(--yellow);
   }
 
   .skills__content {
@@ -1506,6 +1521,10 @@ img {
 @media (prefers-reduced-motion: reduce) {
 
   html {
+    scroll-behavior: auto;
+  }
+
+  .skills__ticker {
     scroll-behavior: auto;
   }
 

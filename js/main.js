@@ -12,6 +12,13 @@ function setProjectState(project, expanded) {
   details.setAttribute("aria-hidden", String(!expanded));
 }
 
+function scrollToAccordion(element) {
+  const top = element.getBoundingClientRect().top + window.scrollY - 16;
+  window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+}
+
+let accordionScrollTimer;
+
 projectButtons.forEach((button, index) => {
   button.addEventListener("click", () => {
     const selectedProject = projects[index];
@@ -20,6 +27,10 @@ projectButtons.forEach((button, index) => {
     projects.forEach((project) => {
       setProjectState(project, project === selectedProject && willOpen);
     });
+    if (willOpen) {
+      window.clearTimeout(accordionScrollTimer);
+      accordionScrollTimer = window.setTimeout(() => scrollToAccordion(selectedProject), 520);
+    }
   });
 
   button.addEventListener("keydown", (event) => {
@@ -261,13 +272,19 @@ if (archiveList) {
 
   const rows = [...archiveList.querySelectorAll(".archive__row")];
   rows.forEach((row) => row.addEventListener("click", () => {
+    const willOpen = row.getAttribute("aria-expanded") === "false";
     rows.forEach((other) => {
-      const open = other === row && other.getAttribute("aria-expanded") === "false";
+      const open = other === row && willOpen;
       const details = document.getElementById(other.getAttribute("aria-controls"));
       other.setAttribute("aria-expanded", String(open));
       details.setAttribute("aria-hidden", String(!open));
       other.closest(".archive__item").classList.toggle("archive__item--open", open);
     });
+    if (willOpen) {
+      const item = row.closest(".archive__item");
+      window.clearTimeout(accordionScrollTimer);
+      accordionScrollTimer = window.setTimeout(() => scrollToAccordion(item), 470);
+    }
   }));
 }
 
