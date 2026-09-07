@@ -48,12 +48,12 @@ img {
   width: 100%;
   height: 90px;
   padding: 0 var(--page-padding);
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
   align-items: center;
 }
 
 .logo {
+  margin-right: auto;
   font-size: 25px;
   font-weight: 800;
   letter-spacing: -1px;
@@ -65,9 +65,11 @@ img {
 
 .nav {
   display: flex;
+  margin-left: 50px;
   gap: 30px;
   justify-content: center;
-  font-size: 12px;
+  order: 1;
+  font-size: 14px;
   text-transform: uppercase;
 }
 
@@ -91,11 +93,13 @@ img {
 }
 
 .availability {
+  order: 3;
+  margin-left: auto;
   justify-self: end;
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 10px;
+  font-size: 14px;
   text-transform: uppercase;
   line-height: 1.1;
 }
@@ -110,6 +114,24 @@ img {
   margin-left: 7px;
   border-radius: 50%;
   background: var(--black);
+}
+
+.language-switcher {
+  order: 2;
+  display: flex;
+  margin-left: 72px;
+  gap: 6px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.language-switcher a[aria-current="page"] {
+  color: inherit;
+  font-weight: 600;
+}
+
+.language-switcher a:not([aria-current="page"]) {
+  opacity: .55;
 }
 
 
@@ -147,9 +169,29 @@ img {
 .hero__name h1 {
   margin: 0;
   font-size: clamp(68px, 8.1vw, 132px);
-  line-height: .8;
-  letter-spacing: -.075em;
-  font-weight: 500;
+  line-height: .82;
+  letter-spacing: 0;
+  font-weight: 600;
+}
+
+.hero__name h1 > span {
+  font-size: 1.03em;
+  letter-spacing: 0;
+}
+
+.hero__name--uk h1 {
+  font-size: clamp(64px, 7.8vw, 128px);
+}
+
+.hero__name--uk h1 > span {
+  font-size: 1em;
+  letter-spacing: -.01em;
+}
+
+.hero__name--uk .hero__name-minina {
+  display: inline-block;
+  font-size: 1.14em;
+  letter-spacing: -.01em;
 }
 
 .hero__roles {
@@ -182,7 +224,7 @@ img {
   position: absolute;
   left: 28px;
   top: 46%;
-  font-size: 9px;
+  font-size: 12px;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
 }
@@ -208,12 +250,18 @@ img {
   font-weight: 700;
 }
 
+.hero__statement--uk strong {
+  font-size: clamp(40px, 6.8vw, 74px);
+  line-height: 1.06;
+  letter-spacing: -.02em;
+}
+
 .hero__meta {
   position: absolute;
   right: 5vw;
   top: 120px;
   width: 140px;
-  font-size: 9px;
+  font-size: 12px;
   text-transform: uppercase;
   line-height: 1.35;
 }
@@ -1271,6 +1319,10 @@ img {
 
   .hero__statement strong {
     font-size: 20vw;
+  }
+
+  .hero__statement--uk strong {
+    font-size: 9vw;
   }
 
   .project__summary {

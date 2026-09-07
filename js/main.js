@@ -39,6 +39,53 @@ projectButtons.forEach((button, index) => {
 });
 
 const archiveList = document.querySelector(".archive__list");
+const isUkrainian = document.documentElement.lang === "uk";
+const recentWorkContentUk = {
+  voicli: {
+    category: "AI-перекладач зустрічей",
+    about: "Voicli — платформа перекладу на основі AI для багатомовних онлайн-зустрічей. Вона дає змогу учасникам, які говорять різними мовами, спілкуватися за допомогою голосового перекладу та субтитрів у браузері.",
+    role: ["Front-End розробниця", "UI-дизайнерка", "QA"],
+    context: "Продукт створювала команда з двох розробників з нуля. Я відповідала за front-end і працювала безпосередньо з back-end розробником.",
+    contribution: "Створила інтерфейс продукту з нуля: UI-дизайн, front-end реалізація, значна частина логіки продукту та end-to-end тестування.",
+    focus: ["UI-дизайн", "Front-End розробка", "Логіка продукту та користувацькі сценарії", "Адаптивні інтерфейси", "Сценарії зустрічі та pre-join", "Контакти й керування користувачами", "Онбординг", "Багатомовний інтерфейс", "20 локалей", "Підтримка RTL", "Функціональне тестування", "Тестування UI", "Перевірка edge cases", "SEO та локалізований контент"],
+    stack: ["React", "Front-End", "UI", "QA", "i18n"]
+  },
+  "pas-fou": {
+    category: "Платформа оцінки вуглецевого сліду",
+    about: "Pas Fou — платформа оцінки вуглецевого сліду на основі динамічної анкети, яка адаптується до кожного користувача та підтримує індивідуальні й сімейні сценарії.",
+    role: ["Проєктний менеджмент", "Логіка продукту", "QA"],
+    aboutFull: ["Pas Fou — платформа оцінки вуглецевого сліду, що допомагає користувачам розрахувати й зрозуміти свій вплив на довкілля та визначити дії для скорочення викидів.", "В основі продукту — складна динамічна анкета, що охоплює різні сфери повсякденного життя.", "На відміну від лінійного опитування, анкета адаптує структуру до кожного користувача. Відповіді можуть динамічно створювати окремі сутності — наприклад, транспортні засоби або членів домогосподарства — які стають частиною наступних сценаріїв запитань.", "Запитання можуть повторюватися, адаптуватися або відображатися умовно для кожної конкретної сутності.", "Користувачі можуть розрахувати не лише власний слід, а й працювати з членами домогосподарства та відповідати від їхнього імені.", "Після оцінювання користувачі обирають дії для скорочення викидів і відстежують отриманий ефект."],
+    contribution: ["Працювала з логікою продукту, вимогами, координацією розробки та тестуванням складної системи на основі анкети.", "Ключовою частиною продукту була динамічна логіка сутностей.", "Наприклад, користувач може вказати, що має три транспортні засоби. Система створює три окремі сутності, користувач може назвати кожну з них, а подальші запитання про транспорт генеруються та опрацьовуються окремо для кожного.", "Такий самий принцип застосовується до членів домогосподарства та інших залежних сценаріїв."],
+    focus: ["Логіка продукту та вимоги", "Архітектура складної анкети", "Умовні та залежні сценарії запитань", "Різні типи запитань", "Текстові відповіді", "Числові відповіді", "Динамічні сутності, створені користувачем", "Відповіді для конкретних сутностей", "Сценарії членів домогосподарства", "Функціональне тестування", "Тестування UI", "Перевірка edge cases", "Опис і перевірка помилок", "Координація розробки", "Розрахунок вуглецевого сліду", "Дії та рекомендації зі скорочення викидів"],
+    flow: ["Відповідь", "Створення сутностей", "Іменування сутностей", "Генерація залежних запитань", "Збереження відповідей для сутностей"]
+  },
+  greenverify: { category: "Екологічний B2B-сайт", about: "GreenVerify — B2B-сайт польської компанії, що надає послуги з верифікації та консалтингу у сфері викидів GHG, EU ETS, CBAM та ESG.", role: ["Вебдизайнерка", "WordPress-розробниця"], contribution: "Створила сайт з нуля за мінімальних початкових вимог клієнта. Розробила візуальний напрям, структуру сторінок та UI, а також реалізувала повний багатомовний сайт на WordPress.", focus: ["Вебдизайн", "Структура сторінок", "UI", "Розробка на WordPress", "Адаптивна розробка", "Багатомовний сайт", "Структура контенту"], stack: ["WordPress", "UI", "Адаптивна розробка", "Багатомовність"] },
+  yourlifexpert: { category: "E-commerce та wellness-платформа", about: "YourLifeExpert — wellness e-commerce платформа, що поєднує онлайн-магазин, освітній контент і персоналізований користувацький досвід.", role: ["Розробка WordPress / WooCommerce", "UI"], context: "Це був наявний проєкт на WordPress/WooCommerce, а не сайт, створений з нуля.", contribution: "Працювала з наявним сайтом і вдосконалювала ключові частини продукту. Переробила та відновила основні сторінки, покращила онлайн-магазин і налаштувала реєстраційну анкету для збору додаткових даних під час онбордингу.", focus: ["Редизайн ключових сторінок", "Розробка на WordPress", "WooCommerce", "Покращення онлайн-магазину", "Покращення UI", "Реєстраційна анкета", "Сценарій онбордингу", "Підтримка та розвиток наявного проєкту"], stack: ["WordPress", "WooCommerce", "UI"] },
+  eccm: { category: "Сайт інвестиційної компанії", about: "ECCM — корпоративний сайт австралійської компанії з кількісного управління інвестиціями.", role: ["Вебдизайнерка", "WordPress-розробниця"], contribution: "Спроєктувала та розробила сайт з нуля відповідно до вимог клієнта. Створила структуру сторінок і візуальний інтерфейс, реалізувала адаптивний сайт на WordPress та інтегрувала HubSpot для керування лідами й контактами.", focus: ["Вебдизайн", "Структура сторінок", "Розробка на WordPress", "Адаптивна розробка", "Реалізація UI", "Інтеграція HubSpot"], stack: ["WordPress", "Front-End", "UI", "HubSpot"] }
+};
+const archiveLabels = isUkrainian
+  ? { about: "ПРО ПРОЄКТ", contribution: "МІЙ ВНЕСОК", focus: "ОСНОВНІ НАПРЯМИ", stack: "СТЕК", visit: "ВІДВІДАТИ САЙТ" }
+  : { about: "About the Project", contribution: "My Contribution", focus: "Focus Areas", stack: "Stack", visit: "Visit Website" };
+const archiveUk = {
+  SalonBeauty: ["Beauty / Освіта", "SalonBeauty — великий сайт про б’юті-освіту з навчальними програмами, курсами, послугами та розгорнутим редакційним контентом.", "Самостійно створила сайт на WordPress із комерційною темою: структуру сторінок, адаптацію візуального стилю, організацію контенту, адаптивну верстку та фінальну реалізацію.", ["Налаштування WordPress", "Кастомізація теми", "Структура сторінок", "Адаптація UI", "Організація контенту", "Адаптивна верстка", "Збірка сайту", "Фінальне тестування"]],
+  QP: ["SaaS / Продукт", "QP — внутрішня AI-платформа дослідницького середовища QUAM Institute у Канаді, що об’єднує основні AI-моделі, спільну базу промптів, API-ключі, налаштування моделей, RAG-бази знань, чати та транскрипцію.", "Моя роль поєднує проєктний менеджмент і комплексне ручне тестування AI-платформи: координацію задач, вимоги, логіку продукту, перевірку інтеграцій моделей, ключів, прав доступу, промптів, RAG, документів, чатів і транскрипції, а також регресійне тестування та перевірку виправлень.", ["Проєктний менеджмент", "Координація розробки", "Вимоги та логіка продукту", "Manual QA", "Функціональне тестування", "Регресійне тестування", "Інтеграції AI-моделей", "Перевірка конфігурацій моделей", "Сценарії API-ключів", "Доступи та права команд", "Керування промптами", "RAG-бази знань", "Документи та чати", "Транскрипція", "Edge-case тестування", "Опис помилок", "Перевірка виправлень"]],
+  Vikont: ["Комерційний", "Vikont — комерційний сайт української компанії, що спеціалізується на вікнах, дверях і супутніх рішеннях.", "Самостійно створила сайт на WordPress із комерційною темою: структуру сторінок, візуальну адаптацію, подачу товарів і послуг, налаштування розділів та адаптивну реалізацію.", ["Налаштування WordPress", "Кастомізація теми", "Комерційна структура", "Подача товарів і послуг", "Адаптація UI", "Адаптивна розробка", "Налаштування контенту", "Фінальне тестування"]],
+  KTF: ["Енергетика / Дослідження", "KTF — корпоративний сайт українського дослідницько-консалтингового центру у сфері енергоефективності, викидів парникових газів, верифікації, ISO та екологічних послуг.", "Самостійно створила сайт на WordPress із комерційною темою: структурувала технічний контент, адаптувала інтерфейс, побудувала необхідні сторінки та реалізувала адаптивність.", ["Налаштування WordPress", "Кастомізація теми", "Складна структура контенту", "Корпоративна архітектура", "Подача послуг", "Адаптація UI", "Адаптивна розробка", "Організація контенту", "Фінальне тестування"]],
+  "Metodo Punzo": ["Охорона здоров’я", "Metodo Punzo — італійський медичний сайт про фізіотерапію, спеціалізовані послуги, методи лікування та освітню інформацію для пацієнтів.", "Самостійно створила сайт на WordPress із комерційною темою: структуру сторінок, адаптацію теми до айдентики клініки, організацію медичного контенту та адаптивну реалізацію.", ["Налаштування WordPress", "Кастомізація теми", "Структура медичного контенту", "Сторінки послуг і спеціалістів", "Адаптація UI", "Адаптивна розробка", "Організація контенту", "Фінальне тестування"]],
+  "English in Cebu": ["Освітня платформа", "English in Cebu — платформа для пошуку й порівняння шкіл та курсів англійської мови на Себу. Структура пов’язує школи, курси й освітній контент та дає змогу фільтрувати програми за критеріями.", "Самостійно спроєктувала й розробила повністю кастомну тему WordPress із custom post types, таксономіями, custom fields, зв’язками контенту та багатопараметричною системою фільтрації.", ["Кастомна тема WordPress", "Custom post types", "Custom taxonomies", "Custom fields", "Архітектура пов’язаного контенту", "Структура шкіл і курсів", "Багатопараметрична фільтрація", "Логіка вибору курсів", "Кастомні шаблони", "Front-End розробка", "Адаптивні інтерфейси", "Реалізація UI", "Функціональне тестування"]],
+  "Alliance Group": ["Корпоративний / B2B", "Alliance Group — корпоративний B2B-сайт, що презентує послуги, експертизу та напрями діяльності компанії.", "Самостійно створила сайт на WordPress із комерційною темою: розробила структуру сторінок, адаптувала дизайн, організувала корпоративний контент і реалізувала адаптивний сайт.", ["Налаштування WordPress", "Кастомізація теми", "Корпоративна структура", "Адаптація UI", "Подача послуг", "Адаптивна розробка", "Організація контенту", "Фінальне тестування"]],
+  "Vergleiche.ch": ["Платформа порівняння", "Vergleiche.ch — швейцарська платформа порівняння з великим каталогом товарів і пропозицій багатьох онлайн-магазинів. Для швидкого пошуку об’ємних даних інтегровано Elasticsearch.", "Моя основна роль — проєктний менеджмент і QA. Координувала задачі, вимоги та логіку продукту, тестувала імпорти каталогу, пошук і фільтри, дані з різних джерел, edge cases, документувала помилки та перевіряла виправлення.", ["Проєктний менеджмент", "Координація розробки", "Вимоги та логіка продукту", "Функціональне тестування", "Регресійне тестування", "Тестування імпорту даних", "Великий каталог товарів", "Пошук Elasticsearch", "Пошук і фільтрація", "Узгодженість даних", "Edge-case тестування", "Документування помилок", "Перевірка виправлень"]],
+  Belimo: ["Інженерія / E-commerce", "Belimo — застарілий сайт WordPress/WooCommerce з інженерними та автоматизаційними товарами. На початку роботи PHP, ядро WordPress, база даних, тема й плагіни були суттєво застарілими.", "Відновлювала й модернізувала сайт без перебудови з нуля. Планувала безпечну послідовність оновлень PHP, WordPress, WooCommerce, теми та плагінів, тестувала після кожного етапу, замінювала несумісні плагіни, виправляла функціональні й візуальні проблеми та підтримувала сайт.", ["Відновлення legacy WordPress", "Планування оновлень", "Оновлення WordPress / WooCommerce", "Оновлення PHP", "Оновлення теми й плагінів", "Заміна плагінів", "Вирішення сумісності", "Функціональне тестування", "Регресійне тестування", "Виправлення помилок", "Виправлення UI / layout", "Підтримка сайту"]],
+  Top20Banks: ["Fintech / Порівняння", "Top20Banks — фінансовий сайт порівняння банківських продуктів та інформації, що надходить із зовнішніх сервісів.", "Створила front-end за готовими дизайнами та інтегрувала зовнішні API для динамічного отримання й відображення фінансових даних.", ["Front-End розробка", "Адаптивна верстка", "Інтеграція API", "Динамічне відображення даних", "Подача фінансових даних", "Реалізація UI", "Кросбраузерне тестування"]],
+  UART: ["Мистецтво / Галерея", "UART — артплатформа зі структурованим контентом галереї, художниками, роботами та вибором за категоріями.", "Самостійно створила сайт на WordPress із додатковою кастомною розробкою: custom post types, категорії та структури контенту для організації галереї.", ["Налаштування WordPress", "Кастомізація теми", "Custom post types", "Custom taxonomies / категорії", "Архітектура контенту", "Структура галереї", "Адаптація UI", "Адаптивна розробка", "Організація контенту", "Фінальне тестування"]],
+  Enercom: ["Енергетика / Корпоративний", "Enercom — корпоративний сайт компанії, що працює в енергетичному секторі.", "Самостійно спроєктувала й розробила кастомну тему WordPress: структуру сайту, сторінкові шаблони, інтеграцію WordPress, адаптивний front-end і налаштування контенту.", ["Кастомна тема WordPress", "Структура сайту", "Кастомні шаблони", "Front-End розробка", "Інтеграція WordPress", "Адаптивна розробка", "Налаштування контенту", "Реалізація UI", "Фінальне тестування"]],
+  ForexListing: ["Фінанси / Порівняння", "ForexListing — фінансовий інформаційний сайт із forex-лістингами та динамічно завантажуваними ринковими даними.", "Створила front-end за готовими дизайнами та інтегрувала зовнішні API для отримання й динамічного відображення фінансових даних і позицій.", ["Front-End розробка", "Адаптивна верстка", "Інтеграція API", "Динамічне відображення даних", "Подача фінансових даних", "Реалізація UI", "Кросбраузерне тестування"]],
+  "Loft Dance": ["Освіта", "Loft Dance — сайт танцювальної школи з програмами, заняттями та пов’язаним контентом у візуально орієнтованому інтерфейсі.", "Самостійно спроєктувала й розробила кастомну тему WordPress, створила структуру сторінок, front-end, шаблони, адаптивність і контент.", ["Кастомна тема WordPress", "Вебдизайн", "Структура сторінок", "Кастомні шаблони", "Front-End розробка", "Інтеграція WordPress", "Адаптивна розробка", "Налаштування контенту", "Фінальне тестування"]],
+  "Mobiblade China": ["Маркетинг", "Mobiblade China — корпоративний маркетинговий сайт для присутності компанії на китайському ринку.", "Самостійно спроєктувала й розробила кастомну тему WordPress: структуру, інтерфейс, шаблони, інтеграцію WordPress, адаптивність і контент.", ["Кастомна тема WordPress", "Структура сайту", "Вебдизайн", "Кастомні шаблони", "Front-End розробка", "Інтеграція WordPress", "Адаптивна розробка", "Налаштування контенту", "Фінальне тестування"]],
+  "Blackridge Capital Management": ["Фінанси", "Blackridge Capital Management — корпоративний сайт інвестиційної компанії. Оригінальна версія сайту більше не працює онлайн.", "Самостійно спроєктувала й розробила оригінальний сайт як кастомну тему WordPress: структуру, візуальну реалізацію, шаблони, інтеграцію, адаптивний front-end і контент.", ["Кастомна тема WordPress", "Корпоративна структура", "Кастомні шаблони", "Front-End розробка", "Інтеграція WordPress", "Адаптивна розробка", "Налаштування контенту", "Реалізація UI", "Фінальне тестування"]],
+  "AIGNER Munich": ["Електронна комерція", "AIGNER Munich — міжнародний e-commerce сайт бренду люксової моди на Shopify.", "Самостійно працювала з storefront на Shopify та наявною темою: налаштувала й адаптувала тему, зібрала сторінки, додала товари й контент та виконала необхідні візуальні й функціональні кастомізації.", ["Налаштування Shopify", "Конфігурація теми", "Кастомізація теми", "Збірка сторінок", "Налаштування товарів і контенту", "Організація e-commerce контенту", "UI-налаштування", "Адаптивні перевірки", "Фінальне тестування"]],
+  "Beam Bold": ["Електронна комерція", "Beam Bold — e-commerce сайт модного бренду на Shopify.", "Самостійно створила й налаштувала storefront на Shopify з використанням теми: адаптувала тему, зібрала основні сторінки, налаштувала товари й контент та виконала необхідні кастомізації.", ["Налаштування Shopify", "Конфігурація теми", "Кастомізація теми", "Збірка сторінок", "Налаштування товарів", "Наповнення контентом", "E-commerce структура", "UI-налаштування", "Адаптивні перевірки", "Фінальне тестування"]]
+};
 const archiveProjects = [
   ["SalonBeauty", "Beauty / Education", "WordPress", "Live", "Beauty education platform with courses, services and extensive content.", "https://www.salonbeauty.com.ua/"],
   ["QP", "SaaS / Product", "React / TypeScript / UI", "Internal Use", "Product workspace redesigned as a modern web application with a new UI system and improved user flows."],
@@ -188,22 +235,27 @@ const archiveCaseDetails = {
 if (archiveList) {
   archiveList.replaceChildren();
   archiveProjects.forEach((project, index) => {
-    const [name, category, technology, status, description, url] = project;
+    const [name, categoryValue, technology, status, descriptionValue, url] = project;
+    const ukData = isUkrainian ? archiveUk[name] : null;
+    const category = ukData?.[0] || categoryValue;
+    const description = ukData?.[1] || descriptionValue;
     const id = `archive-details-${index + 1}`;
     const item = document.createElement("li");
     item.className = "archive__item";
     const slug = name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
     const screenshots = archiveScreenshotFiles[name] || [];
-    const caseDetails = archiveCaseDetails[name];
-    const focus = caseDetails?.focus?.length ? `<h3>Focus Areas</h3><ul class="archive__focus">${caseDetails.focus.map((item) => `<li>${item}</li>`).join("")}</ul>` : "";
-    const stack = caseDetails?.stack ? `<h3>Stack</h3><p>${caseDetails.stack}</p>` : "";
+    const baseCaseDetails = archiveCaseDetails[name];
+    const caseDetails = ukData ? { ...(baseCaseDetails || {}), about: ukData[1], contribution: ukData[2], focus: ukData[3] } : baseCaseDetails;
+    const focus = caseDetails?.focus?.length ? `<h3>${archiveLabels.focus}</h3><ul class="archive__focus">${caseDetails.focus.map((item) => `<li>${item}</li>`).join("")}</ul>` : "";
+    const stack = caseDetails?.stack ? `<h3>${archiveLabels.stack}</h3><p>${caseDetails.stack}</p>` : "";
     const about = caseDetails?.about || description;
-    const role = caseDetails?.role?.length ? `<h3>My Role</h3><ul class="archive__focus">${caseDetails.role.map((item) => `<li>${item}</li>`).join("")}</ul>` : "";
-    const contribution = caseDetails?.contribution || "Details will be added.";
+    const role = caseDetails?.role?.length ? `<h3>${isUkrainian ? "МОЯ РОЛЬ" : "My Role"}</h3><ul class="archive__focus">${caseDetails.role.map((item) => `<li>${item}</li>`).join("")}</ul>` : "";
+    const contribution = caseDetails?.contribution || (isUkrainian ? "Деталі буде додано." : "Details will be added.");
     const gallery = screenshots.length
-      ? `<h3>Project Screenshots</h3><div class="archive__gallery">${screenshots.map((file, shotIndex) => `<img src="assets/images/projects/portfolio-screenshots/project-archive/${slug}/${file}" alt="${name} project screenshot ${shotIndex + 1}" loading="lazy">`).join("")}</div>`
+      ? `<h3>${isUkrainian ? "СКРИНШОТИ ПРОЄКТУ" : "Project Screenshots"}</h3><div class="archive__gallery">${screenshots.map((file, shotIndex) => `<img src="assets/images/projects/portfolio-screenshots/project-archive/${slug}/${file}" alt="${isUkrainian ? `${name} — скриншот проєкту ${shotIndex + 1}` : `${name} project screenshot ${shotIndex + 1}`}" loading="lazy">`).join("")}</div>`
       : "";
-    item.innerHTML = `<button class="archive__row" type="button" aria-expanded="false" aria-controls="${id}"><span class="archive__name">${name}</span><span class="archive__category">${category}</span><span class="archive__technology">${technology}</span><span class="archive__status${status === "Live" ? " archive__status--live" : ""}">${status}</span><span class="archive__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4 12h16M14 6l6 6-6 6" /></svg></span></button><div class="archive__details" id="${id}" role="region" aria-hidden="true"><div class="archive__details-inner"><div><h3>About the Project</h3><p>${about}</p>${role}<h3>My Contribution</h3><p>${contribution}</p>${focus}${stack}</div><div>${gallery}${url ? `<a class="archive__visit" href="${url}" target="_blank" rel="noopener noreferrer">Visit Website ↗</a>` : ""}</div></div></div>`;
+    const localizedStatus = isUkrainian ? { Live: "ОНЛАЙН", Archive: "АРХІВ", Evolved: "ПРОЄКТ ЗМІНИВСЯ", Maintenance: "ПІДТРИМКА", "Internal Use": "ВНУТРІШНЄ ВИКОРИСТАННЯ" }[status] || status : status;
+    item.innerHTML = `<button class="archive__row" type="button" aria-expanded="false" aria-controls="${id}"><span class="archive__name">${name}</span><span class="archive__category">${category}</span><span class="archive__technology">${technology}</span><span class="archive__status${status === "Live" ? " archive__status--live" : ""}">${localizedStatus}</span><span class="archive__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4 12h16M14 6l6 6-6 6" /></svg></span></button><div class="archive__details" id="${id}" role="region" aria-hidden="true"><div class="archive__details-inner"><div><h3>${archiveLabels.about}</h3><p>${about}</p>${role}<h3>${archiveLabels.contribution}</h3><p>${contribution}</p>${focus}${stack}</div><div>${gallery}${url ? `<a class="archive__visit" href="${url}" target="_blank" rel="noopener noreferrer">${archiveLabels.visit} ↗</a>` : ""}</div></div></div>`;
     archiveList.append(item);
   });
 
@@ -217,4 +269,56 @@ if (archiveList) {
       other.closest(".archive__item").classList.toggle("archive__item--open", open);
     });
   }));
+}
+
+if (isUkrainian) {
+  const recentProjects = [...document.querySelectorAll(".works > .project")];
+  const recentKeys = ["voicli", "pas-fou", "greenverify", "yourlifexpert", "eccm"];
+  const labels = { about: "ПРО ПРОЄКТ", role: "МОЯ РОЛЬ", context: "КОНТЕКСТ ПРОЄКТУ", contribution: "МІЙ ВНЕСОК", focus: "ОСНОВНІ НАПРЯМИ", stack: "СТЕК", live: "ВІДВІДАТИ САЙТ", screenshots: "СКРИНШОТИ ПРОЄКТУ", logic: "ДИНАМІЧНА ЛОГІКА ЗАПИТАНЬ" };
+  recentProjects.forEach((project, index) => {
+    const data = recentWorkContentUk[recentKeys[index]];
+    if (!data) return;
+    project.querySelector(".project__category").textContent = data.category;
+    const summaryLabel = project.querySelector(".project__summary-about-label");
+    if (summaryLabel) summaryLabel.textContent = labels.about;
+    const summaryText = project.querySelector(".project__summary-about > span:last-child");
+    if (summaryText) summaryText.textContent = data.about;
+    const details = project.querySelector(".project__details");
+    details.querySelectorAll("h3").forEach((heading) => {
+      const key = heading.textContent.trim().toLowerCase();
+      const translated = key.includes("my role") ? labels.role : key.includes("project context") ? labels.context : key.includes("my contribution") ? labels.contribution : key.includes("focus areas") ? labels.focus : key === "stack" ? labels.stack : key.includes("dynamic question") ? labels.logic : key.includes("about the project") ? labels.about : null;
+      if (translated) heading.textContent = translated;
+    });
+    const blocks = [...details.querySelectorAll(".project__block")];
+    const roleBlock = blocks.find((block) => block.querySelector("h3")?.textContent === labels.role);
+    if (roleBlock && data.role) roleBlock.querySelectorAll("li").forEach((li, i) => { li.textContent = data.role[i] || li.textContent; });
+    const contextBlock = blocks.find((block) => block.querySelector("h3")?.textContent === labels.context);
+    if (contextBlock && data.context) contextBlock.querySelector("p").textContent = data.context;
+    const contributionBlock = blocks.find((block) => block.querySelector("h3")?.textContent === labels.contribution);
+    if (contributionBlock && data.contribution) {
+      const contribution = Array.isArray(data.contribution) ? data.contribution : [data.contribution];
+      const paragraphs = [...contributionBlock.querySelectorAll("p")];
+      paragraphs.forEach((p, i) => {
+        if (contribution[i]) p.textContent = contribution[i];
+        else p.remove();
+      });
+    }
+    const aboutBlock = blocks.find((block) => block.querySelector("h3")?.textContent === labels.about);
+    if (aboutBlock && data.aboutFull) {
+      const heading = aboutBlock.querySelector("h3");
+      aboutBlock.replaceChildren(heading, ...data.aboutFull.map((text) => { const p = document.createElement("p"); p.textContent = text; return p; }));
+    }
+    const focusBlock = blocks.find((block) => block.querySelector("h3")?.textContent === labels.focus);
+    if (focusBlock && data.focus) focusBlock.querySelectorAll("li").forEach((li, i) => { li.textContent = data.focus[i] || li.textContent; });
+    const stackBlock = blocks.find((block) => block.querySelector("h3")?.textContent === labels.stack);
+    if (stackBlock && data.stack) stackBlock.querySelectorAll("li").forEach((li, i) => { li.textContent = data.stack[i] || li.textContent; });
+    if (data.flow) {
+      const flow = details.querySelector(".project__flow");
+      if (flow) flow.querySelectorAll("li").forEach((li, i) => { li.textContent = data.flow[i] || li.textContent; });
+    }
+    const gallery = details.querySelector(".project__gallery");
+    if (gallery) gallery.setAttribute("aria-label", `${project.querySelector(".project__title").textContent.trim()} — скриншоти проєкту`);
+    const live = details.querySelector(".project__live");
+    if (live) live.childNodes[0].textContent = `${labels.live} `;
+  });
 }
